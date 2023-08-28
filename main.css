@@ -1,0 +1,267 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+menu,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section {
+  display: block;
+}
+/* HTML5 hidden-attribute fix for newer browsers */
+*[hidden] {
+  display: none;
+}
+
+:root {
+  --main-bg-color: #ffd677;
+  --main-box-color: #fff;
+  --main-input-color: #e8e8e8;
+  --main-btn-color: #000;
+  --main-txt-color: #000;
+  --main--point-color: #ff5945;
+  --checked-color: #555;
+}
+
+body {
+  line-height: 1;
+  min-width: 400px;
+  font-family: "Apple SD Gothic Neo";
+  background-color: var(--main-bg-color);
+}
+
+menu,
+ol,
+ul,
+li {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+* {
+  box-sizing: border-box;
+}
+
+#background {
+  width: 100%;
+  min-height: 100vh;
+  padding: 10px;
+}
+
+#to-do-box {
+  border-radius: 10px;
+  width: 80%;
+  max-width: 540px;
+  background: var(--main-box-color);
+  margin: 100px auto 50px;
+  padding: 40px 30px 70px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#to-do-box h1 {
+  font-size: 2rem;
+  font-family: "Abril Fatface", cursive;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#add-task-box {
+  width: 100%;
+  height: 2.7em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--main-input-color);
+  border-radius: 30px;
+  margin-bottom: 20px;
+  padding-left: 20px;
+}
+
+#input-task {
+  width: 100%;
+  outline: none;
+  border: none;
+  background: transparent;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+#add-task-btn {
+  font-size: 1rem;
+  outline: none;
+  border: none;
+  padding: 10px 34px;
+  height: 2.7rem;
+  background: var(--main--point-color);
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 40px;
+  transition: 0.3s;
+}
+
+#add-task-btn:hover {
+  opacity: 0.7;
+}
+
+ul li {
+  word-wrap: break-word;
+  text-align: justify;
+  font-size: 1rem;
+  padding: 12px 30px 12px 50px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  position: relative;
+}
+
+ul li::before {
+  content: "";
+  position: absolute;
+  height: 1.7rem;
+  width: 1.7rem;
+  border-radius: 50%;
+  background-image: url(images/unchecked.png);
+  background-size: cover;
+  background-position: center;
+  top: 6px;
+  left: 8px;
+}
+
+ul li.checked {
+  color: var(--checked-color);
+  text-decoration: line-through;
+}
+
+ul li.checked::before {
+  background-image: url(images/checked.png);
+}
+
+ul li span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  top: 6px;
+  width: 1.8rem;
+  height: 1.8rem;
+  font-size: 23px;
+  color: var(--checked-color);
+  line-height: 40px;
+}
+
+ul li span:hover {
+  background-color: var(--main-input-color);
+  border-radius: 50%;
+}
